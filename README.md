@@ -22,9 +22,9 @@ The strategy that I followed was, first by hand, I chose gains and saw how the s
 
 The final gains are: 
 
-Kp = -0.161991;
-Ki_initial = -0.000008;
-Kd_initial = -2.49979;
+* Kp = -0.161991
+* Ki_initial = -0.000008
+* Kd_initial = -2.49979
 
 
 ## Dependencies
