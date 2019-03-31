@@ -45,12 +45,11 @@ int main() {
    //static double Ki_initial = -0.0005;
    //static double Kd_initial = -1.693;
 
-   static double Kp_initial = -0.162158;
+   static double Kp_initial = -0.161991;
    static double Ki_initial = -0.000008;
-   static double Kd_initial = -2.5;
+   static double Kd_initial = -2.49979;
 
    static double thro = 0.3;
-   static double speed_limit = 10;
 
    pid.Init(Kp_initial, Ki_initial, Kd_initial);
 
@@ -87,14 +86,15 @@ int main() {
           static bool p_flag = false;
           static bool i_flag = false;
           static bool d_flag = false;
-          static bool do_twiddle = true;
+          //Set to true in case you want to do twiddle
+          static bool do_twiddle = false;
           static int count_out;
           vector<double> result;
           //pid.Restart(ws);
 
 
           if (do_twiddle){
-            if (timesteps > 1000){
+            if (timesteps > 500){
                   if (!p_flag && !i_flag && !d_flag){
                       result = pid.Twiddle(0.2,Kp_initial,0,error);
                       Kp_initial = result[1];
@@ -122,7 +122,7 @@ int main() {
                   pid.Restart(ws);
                   timesteps = 0;
                   error = 0.0;
-                  if (result[2] < 0.0000000001) do_twiddle = false;
+                  if (result[2] < 0.00000001) do_twiddle = false;
                   return;
             }
             else{

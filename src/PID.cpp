@@ -64,7 +64,7 @@ vector<double> PID::Twiddle(double tol, double p, int i, double error) {
    vector<double> result;
    static bool is_init_twiddle = false;
    static unsigned count = 0;
-   static vector<double> dp = {0.001,0.001,0.001};
+   static vector<double> dp = {0.0001,0.0001,0.0001};
    static double best_error = error;
    static double tole = 3;
 
