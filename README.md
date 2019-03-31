@@ -18,7 +18,7 @@ The architecture of the controller is:
 
 Tunning the gains is not an easy task. A high **I** gain turns into sharp oscilations and the car will roll out of the road. Similarly, finding the right **P** and **D** should be done also carfully to improve the transient response. If the P gain is to high, the car will overcorrect the CTE and improve amplitud of oscilations or if it is to low, it will have a really slow reaction, which is not a good scenario when refering to curves.
 
-The strategy that I followed was, first by hand, I chose gains and saw how the system behaved. The values selected for P, I and D were -0.16, 0.0 and -2.5, respectively. Then, I used Twiddle to fine tune the controller. You can see the code of the Twiddle algorithm at the PID.cpp from line 60 to 109.
+The strategy that I followed was, first by hand, I chose gains and saw how the system behaved. The values selected for P, I and D were -0.16, 0.0 and -2.5, respectively. Then, I used Twiddle to fine tune the controller. You can see the code of the Twiddle algorithm at the PID.cpp from line 60 to 109. On the main file I set to false the variable do_twiddle due to the fact that my algorithm is already tune. If you want to do_twiddle, set this boolean variable to true on line 90.
 
 The final gains are: 
 
