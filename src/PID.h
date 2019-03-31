@@ -1,5 +1,9 @@
 #ifndef PID_H
 #define PID_H
+#include <vector>
+#include <uWS/uWS.h>
+
+using std::vector;
 
 class PID {
  public:
@@ -31,7 +35,13 @@ class PID {
    */
   double TotalError();
 
- private:
+  void Restart(uWS::WebSocket<uWS::SERVER> ws);
+
+  vector<double> Twiddle(double tol, double p, int i, double error);
+
+
+
+ //private:
   /**
    * PID Errors
    */
@@ -41,10 +51,13 @@ class PID {
 
   /**
    * PID Coefficients
-   */ 
+   */
   double Kp;
   double Ki;
   double Kd;
+
+  /*
+  Twiddle variables*/
 };
 
 #endif  // PID_H
