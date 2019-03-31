@@ -3,6 +3,9 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 ## Reflection
+
+[here.](https://github.com/mvirgo/PID-Control-Project/blob/master/PID_control_vid.mov)
+
 ### PID algorithm
 The PID controller is an algothm used to follow a reference through a closed loop system that calcultes the error from a setpoint and the actual state of the system and set the control input as a proportion of this cross-track error or CTE. The setpoint is the x and y coordinates at the center of the road of the desired trajectory of the car.
 
