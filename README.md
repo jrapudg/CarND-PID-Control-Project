@@ -7,7 +7,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 In the PID algorithm, the P stands for proportional, the I for integral and the D for differential. Each part of the algorithm plays an important role to control the postion of the car and how it reaches the goal position. The P and D modifies the transient response of the system and the I eliminates the steady state error. These gains do this job through the error of the sistema.. The architecture of the controller is:
 
-'steering_angle = Kp*cte + Ki*cte_integral + Kd*cte_differential'
+''steering_angle = Kp*cte + Ki*cte_integral + Kd*cte_differential''
 
 
 Thestrc
