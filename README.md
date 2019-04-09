@@ -7,7 +7,7 @@ Self-Driving Car Engineer Nanodegree Program
 You can watch the video of the resulting performance of the controller [here.](pid_video.mp4)
 
 ### PID algorithm
-The PID controller is an algorithm used to follow a reference through a closed loop system that calcultes the error from a setpoint and the actual state of the system and set the control input as a proportion of this cross-track error or CTE. The setpoint is the x and y coordinates at the center of the road of the desired trajectory of the car.
+The PID controller is an algorithm used to follow a reference through a closed loop system that calculates the error from a setpoint and the actual state of the system and set the control input as a proportion of this cross-track error or CTE. The setpoint is the x and y coordinates at the center of the road of the desired trajectory of the car.
 
 In the PID algorithm, the **P** stands for proportional, the **I** for integral and the **D** for differential. Each part of the algorithm plays an important role to control the postion of the car and how it reaches the goal position. The P and D modifies the transient response of the system and the I eliminates the steady state error. These gains do this job through the error of the system. The proportional gain means that the steering angle of the car will be set in proportion of the CTE. The integral part accumulate the CTE up to the current point. The sign of that accumulative error means which side of the road the car has been for a while in. The D parte takes the rate of change of CTE and a high value will result in high overshooting.
 
